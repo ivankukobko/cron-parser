@@ -1,0 +1,22 @@
+PATH
+  remote: .
+  specs:
+    cron-parser (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.14.3)
+    rake (12.3.3)
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  bundler (>= 2.0)
+  cron-parser!
+  minitest (~> 5.0)
+  rake (~> 12.0)
+
+BUNDLED WITH
+   2.2.4

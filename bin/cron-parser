@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+set -f
+if [ $# -eq 0 ] ; then
+  echo "Usage:"
+  echo "./cron_parser.sh '0 0 0 0 0 /bin/sh'"
+  echo "check https://crontab.guru for correct input format ;)"
+    exit 0
+fi
+ruby ./lib/cron/cli.rb $1
+set +f
+
