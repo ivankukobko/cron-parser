@@ -1,7 +1,6 @@
 # Cron::Parser
 Cron Parser is you bestest friend!
 
-
 ### Testing
 ```
 $ rake
@@ -25,8 +24,8 @@ Or install it yourself as:
 
 ## Usage
 
-Script deciphers cron commands and prints the explanation, total or per segment
-```
+Script deciphers cron commands and prints the explanation (total or per segment) when the command will be executed
+```ruby
 > Cron::Parser.parse '0 0 1 1 * /bin/sh'
 minute       0
 hour         0
@@ -36,7 +35,7 @@ day of week  0, 1, 2, 3, 4, 5, 6
 command      /bin/sh
 ```
 
-```
+```ruby
 > cron_expression = Cron::Expression.new '0 0 1 1 * /bin/sh'
 > cron_expression.command
 => '/bin/sh'
@@ -51,7 +50,7 @@ Available segment methods for CronExpression are:
 * `command`
 
 Command-line:
-```
+```bash
 $ ./bin/cron-parser '0 0 1 1 * /bin/sh'
 
 minute       0
