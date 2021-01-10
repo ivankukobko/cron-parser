@@ -25,7 +25,32 @@ Or install it yourself as:
 
 ## Usage
 
-Script deciphers cron commands
+Script deciphers cron commands and prints the explanation, total or per segment
+```
+> Cron::Parser.parse '0 0 1 1 * /bin/sh'
+minute       0
+hour         0
+day of month 1
+month        1
+day of week  0, 1, 2, 3, 4, 5, 6
+command      /bin/sh
+```
+
+```
+> cron_expression = Cron::Expression.new '0 0 1 1 * /bin/sh'
+> cron_expression.command
+=> '/bin/sh'
+```
+
+Available segment methods for CronExpression are:
+* `minute`
+* `hour`
+* `day_of_month`
+* `month`
+* `day_of_week`
+* `command`
+
+Command-line:
 ```
 $ ./bin/cron-parser '0 0 1 1 * /bin/sh'
 
