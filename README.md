@@ -12,7 +12,7 @@ $ rake
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'cron-parser'
+gem 'cron-parser', github: 'https://github.com/ivankukobko/cron-parser'
 ```
 
 And then execute:
